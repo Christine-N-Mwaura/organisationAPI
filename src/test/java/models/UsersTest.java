@@ -25,4 +25,21 @@ public class UsersTest {
         assertTrue(setUpUser() instanceof Users);
     }
 
+
+    @Test
+    public void getName_userInstantiatesWithName_true() {
+        assertEquals("Fancy",setUpUser().getName());
+    }
+
+    @Test
+    public void getPosition_userInstantiatesWithUserposition_true() {
+        assertEquals("Manager",setUpUser().getPosition());
+    }
+
+    @Test
+    public void getRoles_userInstantiatesWithUserRoles_true() {
+        assertEquals("govern",setUpUser().getRoles());
+    }
+
+
 }
