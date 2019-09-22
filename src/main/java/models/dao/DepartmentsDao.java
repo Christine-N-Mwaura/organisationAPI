@@ -7,7 +7,7 @@ public interface DepartmentsDao {
     //create
     void add(Departments department);
 
-    //read
+    //reade
     List<Departments> all();
 
     //delete
