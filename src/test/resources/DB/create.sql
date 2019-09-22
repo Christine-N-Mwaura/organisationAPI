@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS departments(
  id int PRIMARY KEY auto_increment,
  description VARCHAR,
  deptname VARCHAR,
- empnumber int
+ empnumber INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS news(
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS users(
 id int PRIMARY KEY auto_increment,
 name VARCHAR,
 position VARCHAR,
-deptid int,
+deptid INTEGER,
 roles VARCHAR,
 
 );
