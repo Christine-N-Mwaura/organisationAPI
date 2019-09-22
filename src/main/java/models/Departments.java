@@ -26,4 +26,16 @@ public class Departments {
     public int getEmpNumber() {
         return empNumber;
     }
+
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setEmpNumber(int empNumber) {
+        this.empNumber = empNumber;
+    }
 }
