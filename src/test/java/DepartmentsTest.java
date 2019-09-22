@@ -29,12 +29,12 @@ public class DepartmentsTest {
     }
 
     @Test
-    public void getDeptName_departmentInstantiatesWithName_true() {
-        assertEquals("Accounts",setUpDept().getDescription());
+    public void getDescription_departmentInstantiatesWithDeptDescription_true() {
+        assertEquals("Deals with money",setUpDept().getDescription());
     }
 
     @Test
-    public void getDeptName_departmentInstantiatesWithName_true() {
-        assertEquals("Accounts",setUpDept().getEmpNumber());
+    public void getEmpNumber_departmentInstantiatesWithEmpNumber_true() {
+        assertEquals(32,setUpDept().getEmpNumber());
     }
 }
