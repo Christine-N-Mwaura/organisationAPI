@@ -12,4 +12,16 @@ public class Users {
         this.position = position;
         this.roles = roles;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
 }
