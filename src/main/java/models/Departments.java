@@ -1,3 +1,5 @@
+package models;
+
 public class Departments {
     private String deptName;
     private String description;
