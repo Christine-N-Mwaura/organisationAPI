@@ -1,3 +1,4 @@
+import models.Departments;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -37,4 +38,5 @@ public class DepartmentsTest {
     public void getEmpNumber_departmentInstantiatesWithEmpNumber_true() {
         assertEquals(32,setUpDept().getEmpNumber());
     }
+
 }
