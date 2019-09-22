@@ -25,19 +25,15 @@ public class NewsTest {
         assertTrue(setUpNews() instanceof News);
     }
 
-//    @Test
-//    public void getDeptName_departmentInstantiatesWithName_true() {
-//        assertEquals("Accounts",setUpNews().getDeptName());
-//    }
-//
-//    @Test
-//    public void getDescription_departmentInstantiatesWithDeptDescription_true() {
-//        assertEquals("Deals with money",setUpDept().getDescription());
-//    }
-//
-//    @Test
-//    public void getEmpNumber_departmentInstantiatesWithEmpNumber_true() {
-//        assertEquals(32,setUpDept().getEmpNumber());
-//    }
+    @Test
+    public void getContent_newsInstantiatesWithContent_true() {
+        assertEquals("my news",setUpNews().getContent());
+    }
+
+    @Test
+    public void getWrittenBy_newsInstantiatesWithWrittenBy_true() {
+        assertEquals("Christine",setUpNews().getWrittenBy());
+    }
+
 
 }
