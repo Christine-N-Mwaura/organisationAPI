@@ -24,4 +24,16 @@ public class Users {
     public String getRoles() {
         return roles;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
 }
