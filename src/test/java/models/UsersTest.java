@@ -16,7 +16,7 @@ public class UsersTest {
     public void tearDown() throws Exception {
     }
 
-    public Departments setUpUser(){
+    public Users setUpUser(){
         return new Users("Fancy","Manager","govern");
     }
 
