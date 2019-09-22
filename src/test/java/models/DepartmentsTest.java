@@ -41,4 +41,25 @@ public class DepartmentsTest {
         assertEquals(32,setUpDept().getEmpNumber());
     }
 
+    @Test
+    public void setDeptName_true() {
+        Departments testDept = setUpDept();
+        testDept.setDeptName("HR");
+        assertNotEquals("Accounts",testDept.getDeptName());
+    }
+
+    @Test
+    public void setDescription_true() {
+        Departments testDept = setUpDept();
+       testDept.setDescription("Money");
+        assertNotEquals("Deals with money",testDept.getDescription());
+    }
+
+    @Test
+    public void setEmpNumber_true() {
+        Departments testDept = setUpDept();
+        testDept.setEmpNumber(43);
+        assertNotEquals(32,testDept.getEmpNumber());
+    }
+
 }
