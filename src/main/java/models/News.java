@@ -22,5 +22,11 @@ public class News {
         return writtenBy;
     }
 
+    public void setContent(String content) {
+        this.content = content;
+    }
 
+    public void setWrittenBy(String writtenBy) {
+        this.writtenBy = writtenBy;
+    }
 }
