@@ -41,5 +41,26 @@ public class UsersTest {
         assertEquals("govern",setUpUser().getRoles());
     }
 
+    @Test
+    public void setName_true() {
+        Users testUser = setUpUser();
+        testUser.setName("Britney");
+        assertNotEquals("Fancy",testUser.getName());
+    }
+
+    @Test
+    public void setPosition_true() {
+        Users testUser = setUpUser();
+        testUser.setPosition("General Manager");
+        assertNotEquals("Manager",testUser.getPosition());
+    }
+
+    @Test
+    public void setEmpNumber_true() {
+        Users testUser = setUpUser();
+        testUser.setRoles("lead");
+        assertNotEquals("govern",testUser.getRoles());
+    }
+
 
 }
