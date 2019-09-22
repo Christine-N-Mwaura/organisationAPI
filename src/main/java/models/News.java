@@ -7,10 +7,20 @@ public class News {
     private int deptid;
     private String type;
 
+
     public News(String content, String writtenBy){
         this.content = content;
         this.writtenBy = writtenBy;
 
     }
+
+    public String getContent() {
+        return content;
+    }
+
+    public String getWrittenBy() {
+        return writtenBy;
+    }
+
 
 }
