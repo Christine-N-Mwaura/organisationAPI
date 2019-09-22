@@ -35,5 +35,17 @@ public class NewsTest {
         assertEquals("Christine",setUpNews().getWrittenBy());
     }
 
+    @Test
+    public void setContent_true() {
+        News testNews = setUpNews();
+        testNews.setContent("These are my news");
+        assertNotEquals("my news",testNews.getContent());
+    }
 
+    @Test
+    public void setWrittenBy_true() {
+        News testNews = setUpNews();
+        testNews.setWrittenBy("Wangui");
+        assertNotEquals("Christine",testNews.getWrittenBy());
+    }
 }
