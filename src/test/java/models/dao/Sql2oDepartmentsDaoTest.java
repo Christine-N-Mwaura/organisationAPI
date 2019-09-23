@@ -58,4 +58,14 @@ public class Sql2oDepartmentsDaoTest {
         departmentsDao.deleteById(testDepartment.getId());
         assertEquals(0,departmentsDao.all().size());
     }
+
+    @Test
+    public void clearAll_clearsAllData_true() {
+        Departments testDepartment = setUpDept();
+        departmentsDao.add(testDepartment);
+        Departments otherDepartment = setUpDept();
+        departmentsDao.add(otherDepartment);
+        departmentsDao.clearAll();
+        assertEquals(0,departmentsDao.all().size());
+    }
 }
