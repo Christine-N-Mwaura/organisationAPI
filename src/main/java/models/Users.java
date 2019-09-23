@@ -55,4 +55,20 @@ public class Users {
     public int hashCode() {
         return Objects.hash(name, position, roles, id, deptid);
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDeptid(int deptid) {
+        this.deptid = deptid;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getDeptid() {
+        return deptid;
+    }
 }
