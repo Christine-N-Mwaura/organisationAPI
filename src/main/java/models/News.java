@@ -10,7 +10,7 @@ public class News {
     private String type;
 
 
-    public News(String content, String writtenBy, int deptid){
+    public News(String writtenBy, String content, int deptid){
         this.content = content;
         this.writtenBy = writtenBy;
         this.deptid = deptid;
@@ -39,7 +39,7 @@ public class News {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, content, writtenBy, deptid, type);
+        return Objects.hash(id, writtenBy, content, deptid, type);
     }
 
     public void setContent(String content) {
