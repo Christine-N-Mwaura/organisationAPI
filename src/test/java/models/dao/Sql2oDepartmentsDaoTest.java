@@ -39,4 +39,10 @@ public class Sql2oDepartmentsDaoTest {
         assertNotEquals(testId,testDepartment.getId());
     }
 
+    @Test
+    public void addedDepartmentsAreReturnedFromAll() throws Exception {
+        Departments testDepartment = setUpDept();
+        departmentsDao.add(testDepartment);
+        assertEquals(1, departmentsDao.all().size());
+    }
 }
