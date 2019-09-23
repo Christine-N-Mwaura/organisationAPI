@@ -17,7 +17,7 @@ public class NewsTest {
     }
 
     public News setUpNews(){
-        return new News("my news","Christine",3);
+        return new News("Christine","my news",3);
     }
 
     @Test
