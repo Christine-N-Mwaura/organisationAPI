@@ -47,7 +47,7 @@ public class Sql2oUsersDao implements usersDao{
 
     @Override
     public void update(int id,String newName, String newPosition,String newRoles) {
-        String sql = "UPDATE restaurants SET (name, position,roles) = (:name, :position,:roles) WHERE id=:id";
+        String sql = "UPDATE users SET (name, position,roles) = (:name, :position,:roles) WHERE id=:id";
         try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("name", newName)
