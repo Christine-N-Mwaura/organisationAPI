@@ -1,4 +1,4 @@
-package dao.dao;
+package models.dao;
 
 import models.Users;
 import java.util.List;
