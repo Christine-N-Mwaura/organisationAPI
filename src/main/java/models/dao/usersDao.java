@@ -13,7 +13,7 @@ public interface usersDao {
     Users findById(int id);
 
     //update
-    void update (int id,String name, String position,String roles,int deptid);
+    void update (int id,String name, String position,String roles);
 
     //delete
     void deleteById(int id);
