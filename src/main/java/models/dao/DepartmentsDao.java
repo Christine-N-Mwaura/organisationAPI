@@ -1,4 +1,4 @@
-package dao.dao;
+package models.dao;
 
 import models.Departments;
 import java.util.List;
@@ -7,7 +7,7 @@ public interface DepartmentsDao {
     //create
     void add(Departments department);
 
-    //reade
+    //read
     List<Departments> all();
 
     //delete
