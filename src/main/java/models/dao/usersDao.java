@@ -11,6 +11,7 @@ public interface usersDao {
     //read
     List<Users> all();
     Users findById(int id);
+    Users findByDeptId(int deptId);
 
     //update
     void update (int id,String name, String position,String roles);

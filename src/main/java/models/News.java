@@ -10,9 +10,10 @@ public class News {
     private String type;
 
 
-    public News(String content, String writtenBy){
+    public News(String content, String writtenBy, int deptid){
         this.content = content;
         this.writtenBy = writtenBy;
+        this.deptid = deptid;
 
     }
 
@@ -47,5 +48,30 @@ public class News {
 
     public void setWrittenBy(String writtenBy) {
         this.writtenBy = writtenBy;
+    }
+
+
+    public void setDeptid(int deptid) {
+        this.deptid = deptid;
+    }
+
+    public int getDeptid() {
+        return deptid;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getId() {
+        return id;
     }
 }

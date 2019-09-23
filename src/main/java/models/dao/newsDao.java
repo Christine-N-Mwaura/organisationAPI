@@ -9,7 +9,7 @@ public interface newsDao {
 
     //read
     List<News> all();
-    List<News> getAllUsersByDepartment(int deptId);
+    List<News> getAllNewsByDepartment(int deptId);
 
     //delete
     void deleteById(int id);

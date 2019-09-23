@@ -14,4 +14,6 @@ public class Sql2oUsersDaoTest {
     @After
     public void tearDown() throws Exception {
     }
+
+
 }
