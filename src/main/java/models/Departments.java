@@ -9,6 +9,7 @@ public class Departments {
     private int id;
 
 
+
     public Departments(String deptName, String description, int empNumber){
         this.deptName = deptName;
         this.description = description;
@@ -39,6 +40,14 @@ public class Departments {
 
     public void setEmpNumber(int empNumber) {
         this.empNumber = empNumber;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override

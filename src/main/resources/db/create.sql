@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS departments(
  id int PRIMARY KEY auto_increment,
  description VARCHAR,
  deptname VARCHAR,
- empnumber INTEGERsrc/test/java/models/UsersTest.java
+ empnumber INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS news(

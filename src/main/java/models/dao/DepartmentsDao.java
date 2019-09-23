@@ -1,4 +1,4 @@
-package models.dao;
+package dao.dao;
 
 import models.Departments;
 import java.util.List;
