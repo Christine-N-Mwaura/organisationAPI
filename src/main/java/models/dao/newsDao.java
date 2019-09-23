@@ -1,4 +1,4 @@
-package dao.dao;
+package models.dao;
 
 import models.News;
 import java.util.List;
