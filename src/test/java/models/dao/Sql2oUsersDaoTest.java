@@ -1,12 +1,14 @@
 package models.dao;
 
+import models.Users;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
-import models.Users;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class Sql2oUsersDaoTest {
     private Connection conn;
@@ -61,6 +63,7 @@ public class Sql2oUsersDaoTest {
         assertEquals(testUser, usersDao.findById(testUser.getId()));
     }
 
+
     @Test
     public void updateCorrectlyUpdatesAllFields() throws Exception {
         Users testUser = setUpUser();
@@ -81,6 +84,7 @@ public class Sql2oUsersDaoTest {
         assertEquals(1, usersDao.all().size());
     }
 
+
     @Test
     public void clearAll() throws Exception {
         Users testUser = setUpUser();
@@ -88,4 +92,6 @@ public class Sql2oUsersDaoTest {
         usersDao.clearAll();
         assertEquals(0, usersDao.all().size());
     }
+
+
 }
