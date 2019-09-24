@@ -16,6 +16,11 @@ public class News {
         this.deptid = deptid;
 
     }
+    public News(String writtenBy, String content){
+        this.content = content;
+        this.writtenBy = writtenBy;
+
+    }
 
     public String getContent() {
         return content;
