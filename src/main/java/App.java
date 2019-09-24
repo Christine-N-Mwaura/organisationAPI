@@ -8,8 +8,10 @@ import models.dao.Sql2oUsersDao;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
+
+import static spark.Spark.*;
+
+
 
 
 public class App {
@@ -27,10 +29,7 @@ public class App {
         newsDao = new Sql2oNewsDao(sql2o);
         departmentsDao = new Sql2oDepartmentsDao(sql2o);
         conn = sql2o.open();
-        Departments departments = new Departments("hr","tr",6);
-        departmentsDao.add(departments);
-        News news = new News("Christine","my news");
-        newsDao.add(news);
+
 
 
 
@@ -41,9 +40,14 @@ public class App {
             res.type("application/json");
             return gson.toJson(department);
         });
-        get("/departments", "application/json",(req,res)->{
 
+
+        get("/departments", "application/json", (req, res) -> {
             return gson.toJson(departmentsDao.all());
+        });
+
+        get("/departments/:id", "application/json", (req, res) -> {
+            return gson.toJson(departmentsDao.findById(Integer.parseInt(req.params("id"))));
         });
 
 
@@ -55,6 +59,14 @@ public class App {
             return gson.toJson(user);
         });
 
+        get("/users", "application/json", (req, res) -> {
+            return gson.toJson(usersDao.all());
+        });
+
+        get("/users/:id", "application/json", (req, res) -> {
+            return gson.toJson(usersDao.findById(Integer.parseInt(req.params("id"))));
+        });
+
 
         post("/news/new", "application/json",(req,res)->{
             News nNews = gson.fromJson(req.body(),News.class);
@@ -64,20 +76,15 @@ public class App {
             return gson.toJson(nNews);
         });
 
-
-        get("/departments", "application/json", (req, res) -> { //accept a request in format JSON from an app
-            res.type("application/json");
-            return gson.toJson(departmentsDao.all());//send it back to be displayed
-        });
-
-        get("/departments/:id", "application/json", (req, res) -> { //accept a request in format JSON from an app
-            res.type("application/json");
-            int dptId = Integer.parseInt(req.params("id"));
-            res.type("application/json");
-            return gson.toJson(departmentsDao.findById(dptId));
+        get("/news", "application/json", (req, res) -> {
+            return gson.toJson(newsDao.all());
         });
 
 
+
+        after((req, res) ->{
+            res.type("application/json");
+        });
     }
 
 }
