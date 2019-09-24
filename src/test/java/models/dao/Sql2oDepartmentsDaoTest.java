@@ -47,6 +47,15 @@ public class Sql2oDepartmentsDaoTest {
     }
 
     @Test
+    public void findById() {
+        Departments testDepartment = setUpDept();
+        departmentsDao.add(testDepartment);
+        Departments otherDepartment = setUpDept();
+        departmentsDao.add(otherDepartment);
+        assertEquals(testDepartment,departmentsDao.findById(testDepartment.getId()));
+    }
+
+    @Test
     public void noDepartmentReturnsEmptyList() throws Exception {
         assertEquals(0,departmentsDao.all().size());
     }
