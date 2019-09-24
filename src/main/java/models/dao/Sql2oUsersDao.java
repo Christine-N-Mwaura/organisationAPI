@@ -44,14 +44,7 @@ public class Sql2oUsersDao implements usersDao{
                     .executeAndFetchFirst(Users.class);
         }
     }
-    @Override
-    public Users findByDeptId(int deptId){
-        try (Connection con = sql2o.open()) {
-            return con.createQuery("SELECT * FROM users WHERE deptid = :deptId")
-                    .addParameter("deptid", deptId)
-                    .executeAndFetchFirst(Users.class);
-        }
-    }
+
 
     @Override
     public void update(int id,String newName, String newPosition,String newRoles) {
@@ -90,6 +83,8 @@ public class Sql2oUsersDao implements usersDao{
             System.out.println(ex);
         }
     }
+
+
 
 
 }
