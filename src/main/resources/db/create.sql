@@ -23,3 +23,10 @@ deptid INTEGER,
 roles VARCHAR,
 
 );
+
+CREATE TABLE IF NOT EXISTS departments_users(
+id int PRIMARY KEY auto_increment,
+deptid INTEGER,
+userId VARCHAR,
+
+);
