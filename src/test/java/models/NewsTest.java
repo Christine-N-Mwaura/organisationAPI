@@ -16,35 +16,40 @@ public class NewsTest {
     public void tearDown() throws Exception {
     }
 
-    public News setUpNews(){
+    public News setUpDeptNews(){
         return new News("Christine","my news",3);
     }
 
+    public News setUpGenNews(){
+        return new News("Christine","my news");
+    }
+
+
     @Test
     public void News_newsInstanceOfNews_true() {
-        assertTrue(setUpNews() instanceof News);
+        assertTrue(setUpDeptNews() instanceof News);
     }
 
     @Test
     public void getContent_newsInstantiatesWithContent_true() {
-        assertEquals("my news",setUpNews().getContent());
+        assertEquals("my news",setUpDeptNews().getContent());
     }
 
     @Test
     public void getWrittenBy_newsInstantiatesWithWrittenBy_true() {
-        assertEquals("Christine",setUpNews().getWrittenBy());
+        assertEquals("Christine",setUpDeptNews().getWrittenBy());
     }
 
     @Test
     public void setContent_true() {
-        News testNews = setUpNews();
+        News testNews = setUpDeptNews();
         testNews.setContent("These are my news");
         assertNotEquals("my news",testNews.getContent());
     }
 
     @Test
     public void setWrittenBy_true() {
-        News testNews = setUpNews();
+        News testNews = setUpDeptNews();
         testNews.setWrittenBy("Wangui");
         assertNotEquals("Christine",testNews.getWrittenBy());
     }
