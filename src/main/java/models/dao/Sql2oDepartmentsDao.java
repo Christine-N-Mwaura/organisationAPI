@@ -38,6 +38,15 @@ public class Sql2oDepartmentsDao implements DepartmentsDao {
                     .executeAndFetch(Departments.class);
         }
     }
+
+    @Override
+    public Departments findById(int id) {
+        try (Connection con = sql2o.open()) {
+            return con.createQuery("SELECT * FROM departments WHERE id = :id")
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(Departments.class);
+        }
+    }
     @Override
     public void deleteById(int id) {
         String sql = "DELETE from departments WHERE id=:id";
